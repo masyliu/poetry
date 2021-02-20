@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Masy Liu">
+  <meta name="title" content="Poetry">
+  <meta name="description" content="Poetry">
+  <meta name="keywords" content="Poetry">
+  <title>Poetry</title>
+  <link rel="icon" href="images/icon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+  <!-- ==============================
+  header
+  =================================== -->
+  <header id="header">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+        <img id="logo" src="images/logo.png" alt="">
+      </a>
+      <button type="button" class="menuBtn">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-collapse">
+        <button type="button" class="menuCloseBtn">&#10006;</button>
+        <nav class="navbar-list">
+          <div class="dropdown">
+            <button class="dropbtn">首頁版型</button>
+            <div class="dropdown-content">
+              <a href="">影音首頁</a>
+              <a href="">輪播圖首頁</a>
+            </div>
+          </div>
+          <a href="">關於我</a>
+          <div class="dropdown">
+            <button class="dropbtn">詩詞大全</button>
+            <div class="dropdown-content">
+              <a href="">唐詩三百首</a>
+              <a href="">宋詞三百首</a>
+              <a href="">古詩十九首</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">歷代著名詩人</button>
+            <div class="dropdown-content">
+              <a href="">唐代著名詩人</a>
+              <a href="">宋代著名詩人</a>
+              <a href="">初唐四傑</a>
+            </div>
+          </div>
+          <a href="">與我聯絡</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <script>
+    const navCollapse = document.querySelector(".navbar-collapse");
+    const menuBtn = document.querySelector(".menuBtn");
+    const menuCloseBtn = document.querySelector(".menuCloseBtn");
+
+    function openNav() {
+      console.log(this);
+      navCollapse.classList.add("open");
+    }
+
+    function closeNav() {
+      console.log(this);
+      navCollapse.classList.remove("open");
+    }
+
+    function resizeHandler() {
+      if (window.visualViewport.width > 600)
+      navCollapse.classList.remove("open");
+    }
+
+    menuBtn.addEventListener("click", openNav);
+    menuCloseBtn.addEventListener("click", closeNav);
+    window.visualViewport.addEventListener('resize', resizeHandler);
+  </script>
+  <!-- ==============================
+  video
+  =================================== -->
+  <div class="videowrap">
+    <div class="video-containeryt">
+      <div id="player" class="youtubevideobg">
+      </div>
+    </div>
+    <div class="videocontent">
+      <h3>
+      庭院深深深幾許？楊柳堆煙，簾幕無重數
+      </h3>
+      <h2>
+      草色煙光殘照裡，無言誰會憑闌意？ <span class="accentcolor">綠楊芳草</span> 長亭路
+      </h2>
+    </div>	
+  </div>
+  <script>
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {				 
+      height: '100%',
+      width: '100%',
+      videoId: 'fQigKG_KHR0',
+      playerVars: { 'autoplay': 1, 'controls': 0, 'rel': 0, 'hd': 1, 'modestbranding': 1, 'loop': 1, 'showinfo':0, 'autohide': 1, 'disablekb': 1 },
+      events: {
+      'onReady': onPlayerReady,
+      onStateChange: function(e){
+        var id = 'fQigKG_KHR0';
+        if(e.data === YT.PlayerState.ENDED){
+          player.loadVideoById(id);
+        }
+      }					
+      }
+    });
+    }			 
+    function onPlayerReady(event) {
+    event.target.playVideo();
+    }
+  </script>
+  <!-- ==============================
+  latest updates
+  =================================== -->
+  <section id="update">
+    <h2 class="title">最新更新詩詞名句</h2>
+    <p class="tagline">Latest Updated Poetry</p>
+    <div class="newpoem-container">
+      <div class="newpoem">
+        <div class="newpoem-thumb">
+          <img src="images/jr-korpa-1.jpg" alt="">
+          <div class="newpoem-quote">
+            <p><a href=""><span class="false">詩詞</span> (宋代•蘇軾) 雨中花慢•邃院重簾何處</a><br>
+              "2021年2月18日"</p>
+          </div>
+        </div>
+        <div class="newpoem-info">
+          <h2><a href=""><span class="false">詩詞</span> (宋代•蘇軾) 雨中花慢•邃院重簾何處</a></h2>
+          <p>[2021年2月18日]</p>
+        </div>
+      </div>
+      <div class="newpoem">
+        <div class="newpoem-thumb">
+          <img src="images/jr-korpa-2.jpg" alt="">
+          <div class="newpoem-quote">
+            <p><a href=""><span class="false">詩詞</span> (宋代•蘇軾) 漁家傲•臨水縱橫回晚鞚</a><br>
+              "2021年2月18日"</p>
+          </div>
+        </div>
+        <div class="newpoem-info">
+          <h2><a href=""><span class="false">詩詞</span> (宋代•蘇軾) 漁家傲•臨水縱橫回晚鞚</a></h2>
+          <p>[2021年2月18日]</p>
+        </div>
+      </div>
+      <div class="newpoem">
+        <div class="newpoem-thumb">
+          <img src="images/jr-korpa-3.jpg" alt="">
+          <div class="newpoem-quote">
+            <p><a href=""><span class="false">名句</span> 名花傾國兩相歡，常得君王帶笑看。</a><br>
+              "2021年2月18日"</p>
+          </div>
+        </div>
+        <div class="newpoem-info">
+          <h2><a href=""><span class="false">名句</span> 名花傾國兩相歡，常得君王帶笑看。</a></h2>
+          <p>[2021年2月18日]</p>
+        </div>
+      </div>
+      <div class="newpoem">
+        <div class="newpoem-thumb">
+          <img src="images/jr-korpa-4.jpg" alt="">
+          <div class="newpoem-quote">
+            <p><a href=""><span class="false">名句</span> 念橋邊紅藥，年年知爲誰生。</a><br>
+              "2021年2月18日"</p>
+          </div>
+        </div>
+        <div class="newpoem-info">
+          <h2><a href=""><span class="false">名句</span> 念橋邊紅藥，年年知爲誰生。</a></h2>
+          <p>[2021年2月18日]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==============================
+  features
+  =================================== -->
+  <section class="features">
+    <div class="feature-content">
+      <h3>&malt; 點絳脣·金谷年年</h3>
+      <p>朝代：宋代</p>
+      <p>作者：林逋</p>
+      <p>金谷年年，亂生春色誰爲主。餘花落處。滿地和煙雨。又是離歌，一闋長亭暮。王孫去。萋萋無數。南北東西路。</p>
+    </div>
+    <div class="feature-content">
+      <h3>&malt; 憶秦娥·花深深</h3>
+      <p>朝代：宋代</p>
+      <p>作者：鄭文妻</p>
+      <p>花深深。一鉤羅襪行花陰。行花陰。閒將柳帶，細結同心。<br>
+        日邊消息空沈沈。畫眉樓上愁登臨。愁登臨。海棠開後，望到如今。</p>
+    </div>
+    <div class="feature-content">
+      <h3>&malt; 蝶戀花·欲減羅衣寒未去</h3>
+      <p>朝代：宋代</p>
+      <p>作者：趙令畤</p>
+      <p>
+        欲減羅衣寒未去，不卷珠簾，人在深深處。殘杏枝頭花幾許。啼紅正恨清明雨。<br>
+        盡日沈香煙一縷。宿酒醒遲，惱破春情緒。遠信還因歸燕誤。小屏風上西江路。</p>
+    </div>
+  </section>
+  <!-- ==============================
+  about us
+  =================================== -->
+  <section class="about">
+    <div class="split"></div>
+    <div class="about-content">
+      <h2 class="title">三十功名塵與土，八千里路雲和月</h2>
+      <p class="about-lead">臨水縱橫回晚鞚。歸來轉覺情懷動。梅笛煙中聞幾弄。秋陰重。西山雪淡雲凝凍。 美酒一杯誰與共。尊前舞雪狂歌送。腰跨金魚旌旆擁。將何用。只堪妝點浮生夢。</p>
+      <h2 class="title">BEST CHOICE</h2>
+      <ul class="about-list unstyle checklist">
+        <li>玉骨西風，恨最恨、閑卻新涼時節</li>
+        <li>舊日堂前燕，和煙雨，又雙飛。人自老，春長好，夢佳期</li>
+        <li>怒髮衝冠，憑闌處、瀟瀟雨歇</li>
+      </ul>
+    </div>
+  </section>
+  <!-- ==============================
+  footer
+  =================================== -->
+  <footer id="footer">
+    <p class="copyright">2021 Copyright &copy; my website All rights reserved.</p>
+    <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
+  </footer>
+</body>
+</html>
