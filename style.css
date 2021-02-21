@@ -63,14 +63,31 @@ ul.checklist li:before {
 /* header */
 /*=========================*/
 header .navbar-header {
-  background: var(--beige);
-  position: fixed;
+  position: absolute;
+  top: 0;
+  background: transparent;
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 2rem;
   z-index: 99;
+}
+header .navbar-header a {
+  color: white;
+}
+header .navbar-header button {
+  color: white;
+}
+header .navbar-header.fixed {
+  background: var(--beige);
+  position: fixed;
+}
+header .navbar-header.fixed a {
+  color: var(--dark);
+}
+header .navbar-header.fixed button {
+  color: var(--dark);
 }
 .menuBtn {
   display: none;
@@ -116,6 +133,11 @@ header .navbar-header {
   flex-flow: row wrap;
 }
 @media screen and (max-width: 600px) {
+  header .navbar-header {
+    background: var(--beige);
+    position: fixed;
+    top: 0;
+  }
   .menuBtn {
     display: inline-block;
   }
@@ -132,6 +154,12 @@ header .navbar-header {
     overflow: auto;
     background: var(--beige);
   }
+  .navbar-collapse.open a {
+    color: var(--dark);
+  }
+  .navbar-collapse.open button {
+    color: var(--dark);
+  }
   .navbar-collapse.open .menuCloseBtn{
     display: block;
     padding: 0;
@@ -139,14 +167,14 @@ header .navbar-header {
   .navbar-collapse.open .navbar-list {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 6rem 2rem 8rem 8rem 2rem;
+    grid-template-rows: 6rem 2rem 8rem 10rem 2rem;
   }
   .navbar-collapse.open .dropdown {
     display: block;
   }
   .navbar-collapse.open .dropdown .dropdown-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: max-content;
     padding-left: 1rem;
     background: var(--beige);
   }
@@ -230,7 +258,7 @@ header .navbar-header {
   gap: 2rem;
 }
 .newpoem {
-  background-color: var(--beige);
+  background-color: var(--lightgreen);
   display: grid;
   grid-template-columns: 1fr;
 }
