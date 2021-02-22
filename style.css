@@ -245,9 +245,9 @@ header .navbar-header.fixed .navbar-list > * {
 /*=========================*/
 /* index > latest updates */
 /*=========================*/
-#update {
+.update {
   background-color: var(--green);
-  padding: 3rem;
+  padding: 4rem 3rem 3rem 3rem;
   text-align: center;
   transform: scale(0.4);
   animation: update-zoomIn 0.7s forwards;
@@ -256,13 +256,13 @@ header .navbar-header.fixed .navbar-list > * {
   0% {transform: scale(0.6);}
   100%  {transform: scale(1);}
 }
-#update .title {
+.update .title {
   margin-top: 2rem;
 }
-#update .tagline {
+.update .tagline {
   margin-bottom: 2rem;
 }
-#update .tagline:before {
+.update .tagline:before {
   content: "";
   display: block;
   width: 3rem;
@@ -332,7 +332,7 @@ header .navbar-header.fixed .navbar-list > * {
 .newpoem-quote a:hover {
   color: var(--lightpurple);
 }
-#update .false {
+.update .false {
   border: 0.1rem solid var(--lightpurple);
 }
 .newpoem-info {
@@ -351,7 +351,7 @@ header .navbar-header.fixed .navbar-list > * {
   background-color: var(--dark);
 }
 @media screen and (max-width: 950px) {
-  #update {
+  .update {
     animation: update-zoomIn2 0.7s forwards;
   }
   @keyframes update-zoomIn2 {
@@ -434,7 +434,6 @@ header .navbar-header.fixed .navbar-list > * {
   max-height: 600px;
 }
 .slide {
-  border: 1px solid green;
   display: none;
 	padding-bottom:65%;
   animation: fadeIn 1s linear forwards;
@@ -534,4 +533,70 @@ header .navbar-header.fixed .navbar-list > * {
 .dot:hover, .active {
   border: 0.1rem solid var(--beige);
   background-color: var(--dark);
+}
+
+/*=========================*/
+/* news-image > top image */
+/*=========================*/
+#newsTop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 300px;
+}
+.newsTop-container {
+  padding-bottom: 30%;
+}
+.newsTop-container img {
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  animation: move 10s linear forwards;
+}
+@keyframes move {
+  0% {transform: scale(1.3) translateX(0);}
+  100% {transform: scale(1.3) translateX(-20px);}
+}
+.newsTop-container .newsTop-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+.newsTop-container h2 {
+  font-size: 3rem;
+  text-shadow: 0 0 2px black;
+  margin-bottom: 1.5rem;
+}
+.newsTop-container p {
+  font-size: 1.2rem;
+  text-shadow: 0 0 2px black;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.newsTop-container a {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--lightpurple);
+  font-weight: 900;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 2rem;
+  transform: rotate(90deg);
+}
+.newsTop-container a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 600px) {
+  #newsTop {
+    height: 300px;
+  }
+  .newsTop-container img {
+    height: 100%;
+  }
 }
