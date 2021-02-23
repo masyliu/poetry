@@ -2,27 +2,28 @@
 // news-sort > filter
 // =================================
 
-const sort = document.getElementsByClassName("sort");
+
 const filterBtns = document.getElementsByClassName("filterBtn");
-const current = document.getElementsByClassName("active");
+const sort = [...document.querySelectorAll(".sort")];
+let selector = "sort";
 
-filter("all");
-
-function filter(c) {
-  let i;
-  if (c == "all") c = "";
-  for (i = 0; i < sort.length; i++) {
-    sort[i].classList.remove("show");
-    if (sort[i].className.indexOf(c) > -1) 
-    sort[i].classList.add("show");
+filter(selector);
+function filter(n) {
+  for (let j = 0; j < sort.length; j++) {
+    sort[j].classList.remove("show");
+    if ([...sort[j].classList].indexOf(n) > -1) {
+      sort[j].classList.add("show");
+    }
   }
 }
 
 for (let i = 0; i < filterBtns.length; i++) {
   filterBtns[i].addEventListener("click", function() {
+    let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+    selector = this.dataset.type;
+    if (selector == "all") selector = "sort";
+    filter(selector);
   })
 }
-
-
