@@ -18,7 +18,8 @@ function filter(n) {
 }
 
 for (let i = 0; i < filterBtns.length; i++) {
-  filterBtns[i].addEventListener("click", function() {
+  filterBtns[i].addEventListener("click", function(e) {
+    e.preventDefault();
     let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
