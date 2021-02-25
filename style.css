@@ -16,6 +16,7 @@ html {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 16px;
   color: var(--dark);
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -687,17 +688,50 @@ header .navbar-header.fixed .navbar-list > * {
 #news-filter li {
   display: inline-block;
   list-style: none;
+  position: relative;
 }
 #news-filter a {
   display: inline-block;
-  margin: 0 0.6rem;
-  padding: 1rem;
-  border-radius: 15%;
-  background-color: var(--lightgreen);
+	padding: 1rem 1.5rem;
+  border-radius: 0.5rem;;
+  color: var(--lightgreen);
+  background: var(--lightgreen);
+  position: relative;
+  margin: 0 0.5rem;
+  overflow: hidden;
+}
+#news-filter a span{
+  mix-blend-mode: difference;
+}
+#news-filter a::before,
+#news-filter a::after {
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#news-filter a::before {
+  content: '';
+  background: var(--dark);
+  width: 130%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+#news-filter a:hover::before {
+  transform: translateX(100%);
 }
 #news-filter a.active {
-  background-color: var(--dark);
-  color: var(--beige);
+  background-color: var(--lightgreen);
+  color: var(--dark);
+}
+#news-filter a.active::before{
+  opacity: 0;
+}
+#news-filter a.active span {
+  font-weight: bold;
+  mix-blend-mode: normal;
 }
 .sort-container {
   overflow: hidden;
@@ -705,7 +739,6 @@ header .navbar-header.fixed .navbar-list > * {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-
 .sort {
   display: none;
 }
