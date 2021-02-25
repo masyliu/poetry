@@ -15,7 +15,6 @@ html {
   box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 16px;
-  line-height: 1.5rem;
   color: var(--dark);
 }
 *, *:before, *:after {
@@ -30,7 +29,7 @@ img {
 }
 #logo {
   width: 5rem;
-  margin-top: 0.2rem;
+  margin: 0.2rem 1rem;
 }
 a {
   text-decoration: none;
@@ -43,7 +42,6 @@ button {
   background-color: transparent;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 1rem;
-  line-height: 1.5rem;
   color: var(--dark);
 }
 /*=========================*/
@@ -72,18 +70,24 @@ header .navbar-header {
   align-items: center;
   gap: 2rem;
   z-index: 99;
+  transition: all 1s ease-in-out;
 }
 .navbar-list > * {
-  padding-bottom: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   cursor: pointer;
   color: white;
 }
 header .navbar-header.fixed {
-  background: var(--beige);
   position: fixed;
+  background: var(--beige);
+  border-bottom: 0.1rem solid var(--beige);
 }
 header .navbar-header.fixed .navbar-list > * {
   color: var(--dark);
+}
+.navbar-header.fixed #logo {
+  width: 3rem;
 }
 .menuBtn {
   display: none;
@@ -114,6 +118,7 @@ header .navbar-header.fixed .navbar-list > * {
 .navbar-collapse > * {
   padding: 0.8rem;
 }
+
 .navbar-collapse .dropdown {
   position: relative;
 }
@@ -151,6 +156,7 @@ header .navbar-header.fixed .navbar-list > * {
     position: fixed;
     top: 0;
     right: 0;
+    margin-right: -1rem;
     width: 10rem;
     height: 100%;
     overflow: auto;
@@ -167,6 +173,7 @@ header .navbar-header.fixed .navbar-list > * {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5rem 1rem 7rem 9rem 1rem;
+    margin-bottom: 1rem;
   }
   .navbar-collapse.open a:hover, 
   .navbar-collapse.open .dropbtn:hover  {
@@ -327,7 +334,6 @@ header .navbar-header.fixed .navbar-list > * {
 .newpoem-info {
   text-align: left;
   padding: 2rem;
-  line-height: 2rem;;
 }
 .newpoem-info h2 {
   margin-bottom: 1rem;
@@ -339,7 +345,7 @@ header .navbar-header.fixed .navbar-list > * {
   height: 0.1rem;
   background-color: var(--dark);
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
   .update {
     animation: update-zoomIn2 0.7s forwards;
   }
@@ -351,6 +357,7 @@ header .navbar-header.fixed .navbar-list > * {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 600px) {
   .newpoem-container {
     grid-template-columns: 1fr;
@@ -377,9 +384,7 @@ header .navbar-header.fixed .navbar-list > * {
 .feature-content h3 {
   margin-bottom: 1rem;
 }
-.feature-content p {
-  line-height: 1.8rem;
-}
+
 @media screen and (max-width: 950px) {
   .features {
     grid-template-columns: 1fr;
@@ -424,7 +429,7 @@ header .navbar-header.fixed .navbar-list > * {
 }
 .slide {
   display: none;
-	padding-bottom:65%;
+	padding-bottom:70%;
   animation: fadeIn 1s linear forwards;
 }
 @keyframes fadeIn {
@@ -432,13 +437,15 @@ header .navbar-header.fixed .navbar-list > * {
   100% {opacity: 1;}
 }
 .slide img {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   object-fit: cover;
 }
 .slide-content {
 	position:absolute;
-  top: 30%;
+  top: 45%;
   left: 0%;
   right: 0%;
   margin: 0 auto;
@@ -524,48 +531,56 @@ header .navbar-header.fixed .navbar-list > * {
   background-color: var(--dark);
 }
 /*=========================*/
-/* news-text, news-image, news-sort > top image */
+/* top image */
 /*=========================*/
-#newsTop {
+#top {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-height: 300px;
 }
-.newsTop-container {
-  padding-bottom: 30%;
+.top-container {
+  overflow: hidden;
+  width: 100%;
+  min-height: 300px;
 }
-.newsTop-container img {
+.top-container img {
   position: absolute;
   top: 0;
   object-fit: cover;
-  animation: move 10s linear forwards;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  transform-origin:100% 100%;
+  animation: move 20s linear forwards;
 }
 @keyframes move {
-  0% {transform: scale(1.3) translateX(0);}
-  100% {transform: scale(1.3) translateX(-20px);}
+  0% {transform: scale(1);}
+  100% {transform: scale(1.2);}
 }
-.newsTop-container .newsTop-content {
+.top-container .top-content {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -10%);
+  top:8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 30rem;
   color: white;
   text-align: center;
-  z-index: 10;
 }
-.newsTop-container h2 {
+.top-container h2 {
   font-size: 3rem;
   text-shadow: 0 0 2px black;
-  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
-.newsTop-container p {
+.top-container p {
   font-size: 1.2rem;
   text-shadow: 0 0 2px black;
   text-transform: uppercase;
   margin-bottom: 0.8rem;
 }
-.newsTop-container a {
+.top-container a {
   display: block;
   background-color: rgba(0, 0, 0, 0.3);
   color: var(--lightpurple);
@@ -577,19 +592,16 @@ header .navbar-header.fixed .navbar-list > * {
   font-size: 2rem;
   transform: rotate(90deg);
 }
-.newsTop-container a:hover {
+.top-container a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 @media screen and (max-width: 600px) {
-  #newsTop {
+  #top {
     height: 300px;
-  }
-  .newsTop-container img {
-    height: 100%;
   }
 }
 /*=========================*/
-/* news-text > latest updates */
+/* news-text > updates */
 /*=========================*/
 .text-update {
   background-color: var(--green);
@@ -626,9 +638,6 @@ header .navbar-header.fixed .navbar-list > * {
 .text-newpoem img {
   width: 15rem;
 }
-.text-newpoem > * {
-  line-height: 2rem;
-}
 .text-newpoem .text-date {
   font-size: small;
   margin-bottom: 1rem;
@@ -652,7 +661,7 @@ header .navbar-header.fixed .navbar-list > * {
   }
 }
 /*=========================*/
-/* news-sort > latest updates */
+/* news-sort > updates */
 /*=========================*/
 .sort-update {
   background-color: var(--green);
@@ -708,6 +717,8 @@ header .navbar-header.fixed .navbar-list > * {
 }
 .sort .view-overlay img {
   flex-grow: 1;
+  width: 100%;
+  height: 100%;
   transition: all 0.7s ease-in-out;
 }
 .sort .view-overlay:hover img {
@@ -748,7 +759,7 @@ header .navbar-header.fixed .navbar-list > * {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 720px) {
   .sort-update {
     padding: 4rem 2rem 3rem 2rem;
   }
