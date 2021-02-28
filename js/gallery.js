@@ -5,7 +5,6 @@
 
 const galleryImages = document.querySelectorAll('.gallery-image');
 const galleryOverlay = document.querySelector('.gallery-overlay');
-// const overlayInner = document.querySelector('.gallery-overlayInner');
 const overlayImage = galleryOverlay.querySelector('img');
 const overlayClose = galleryOverlay.querySelector('.galleryCloseBtn');
 let imageIndex;
@@ -23,7 +22,6 @@ function handleClose() {
 }
 
 function handleClose2(e) {
-  console.log(e.target);
   if (!e.target.matches('.gallery-overlayInner') && !e.target.matches('img') && !e.target.matches('a') && !e.target.matches('span')) {
     galleryOverlay.classList.remove('open');
   }
