@@ -255,7 +255,7 @@ header .navbar-header.fixed .navbar-list > * {
 /*=========================*/
 .update {
   background-color: var(--green);
-  padding: 4rem 3rem 3rem 3rem;
+  padding: 4rem 3rem 4rem 3rem;
   text-align: center;
   transform: scale(0.4);
   animation: update-zoomIn 0.7s forwards;
@@ -612,7 +612,7 @@ header .navbar-header.fixed .navbar-list > * {
 /*=========================*/
 .text-update {
   background-color: var(--green);
-  padding: 4rem 3rem 3rem 3rem;
+  padding: 4rem 3rem 4rem 3rem;
   transform: scale(0.4);
   text-align: center;
   animation: update-zoomIn 0.7s forwards;
@@ -672,7 +672,7 @@ header .navbar-header.fixed .navbar-list > * {
 /*=========================*/
 .sort-update {
   background-color: var(--green);
-  padding: 4rem 3rem 3rem 3rem;
+  padding: 4rem 3rem 4rem 3rem;
   transform: scale(0.4);
   text-align: center;
   animation: update-zoomIn 0.7s forwards;
@@ -811,7 +811,7 @@ header .navbar-header.fixed .navbar-list > * {
 /*=========================*/
 .gallery {
   background-color: var(--orange);
-  padding: 4rem 0 3rem 0;
+  padding: 4rem 0 4rem 0;
   text-align: center;
 }
 .gallery .title {
@@ -839,25 +839,24 @@ header .navbar-header.fixed .navbar-list > * {
   background: rgba(0, 0, 0, 0.7);
 }
 .gallery-overlay.open {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .gallery-overlayInner {
-  margin: 0 auto;
-  width: fit-content;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   background-color: white;
 }
 .gallery-overlay button {
+  padding: 1rem 0 0.5rem;
   align-self: flex-end;
 }
 .gallery-overlay img {
-  object-fit: cover;
-  height: 85vh;
+  max-height: 90vh;
+  max-width: 90vw;
+  padding-bottom: 1rem;
 }
 .gallery-container {
   overflow: hidden;
