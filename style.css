@@ -844,19 +844,53 @@ header .navbar-header.fixed .navbar-list > * {
   align-items: center;
 }
 .gallery-overlayInner {
-  padding: 1rem;
+  padding: 0.5rem;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 .gallery-overlay button {
-  padding: 1rem 0 0.5rem;
+  padding-bottom: 0.5rem;
   align-self: flex-end;
 }
-.gallery-overlay img {
-  max-height: 90vh;
-  max-width: 90vw;
+.gallery-overlay button:hover {
+  color: var(--lightpurple)
+}
+.gallery-overlayImage {
+  position: relative;
   padding-bottom: 1rem;
+}
+.gallery-overlay img {
+  object-fit: contain;
+  max-height: 85vh;
+  max-width: 77vw;
+}
+.gallery-prev, .gallery-next {
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: auto 0;
+  opacity: 0.6;
+}
+.gallery-prev:hover, .gallery-next:hover {
+  opacity: 0.8;
+  color: var(--lightpurple);
+}
+.gallery-prev {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 25px 0;
+}
+.gallery-next {
+  right: 0;
+  bottom: 0;
+  border-radius: 25px 0;
 }
 .gallery-container {
   overflow: hidden;
