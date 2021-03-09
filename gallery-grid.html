@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Masy Liu">
+  <meta name="title" content="Poetry">
+  <meta name="description" content="Poetry">
+  <meta name="keywords" content="Poetry">
+  <title>Poetry</title>
+  <link rel="icon" href="images/icon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://kit.fontawesome.com/f49a20a247.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ==============================
+  header
+  =================================== -->
+  <header id="header">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+        <img id="logo" src="images/logo.png" alt="">
+      </a>
+      <button type="button" class="menuBtn">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-collapse">
+        <button type="button" class="menuCloseBtn">&#10006;</button>
+        <nav class="navbar-list">
+          <div class="dropdown">
+            <div class="dropbtn">首頁版型</div>
+            <div class="dropdown-content">
+              <a href="index.html">影音首頁</a>
+              <a href="index-slider.html">輪播圖首頁</a>
+            </div>
+          </div>
+          <a href="about.html">關於我</a>
+          <div class="dropdown">
+            <div class="dropbtn">文章列表版型</div>
+            <div class="dropdown-content">
+              <a href="news-text.html">文字標題列表</a>
+              <a href="news-image.html">圖文列表</a>
+              <a href="news-sort.html">分類式圖文列表</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="dropbtn">相簿版型</div>
+            <div class="dropdown-content">
+              <a href="gallery.html">滿版型相簿</a>
+              <a href="gallery-4.html">一般型相簿</a>
+              <a href="gallery-flex.html">Flex Panel相簿</a>
+              <a href="gallery-grid.html">Grid Image相簿</a>
+            </div>
+          </div>
+          <a href="contact.html">與我聯絡</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- ==============================
+  top image
+  =================================== -->
+  <section id="galleryTop top">
+    <div class="galleryTop-container top-container">
+      <img src="images/top-gallery.jpg" alt="">
+      <div class="galleryTop-content top-content">
+        <h2 class="title">Photo Gallery</h2>
+        <a href="#startcontent"><span class="top-downarrow">&raquo;</span></a>
+      </div>
+    </div>
+  </section>
+  <!-- ==============================
+  latest updates
+  =================================== -->
+  <section id="startcontent" class="gallery">
+    <h2 class="title">相簿集</h2>
+    <p class="tagline">Photo Gallery</p>
+    <div class="gallery-content gallery-overlay">
+      <div class="gallery-overlayInner">
+        <button type="button" class="galleryCloseBtn">&#10008; Close</button>
+        <div class="gallery-overlayImage">
+          <img src="" alt="">
+          <a class="overlayBtn gallery-prev" onclick="plusImages(-1)"><span>&cularr;</span></a>
+          <a class="overlayBtn gallery-next" onclick="plusImages(1)"><span>&curarr;</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-container">
+      <div class="gallery-image" data-no="1">
+        <img src="images/gallery1.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="2">
+        <img src="images/gallery2.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="3">
+        <img src="images/gallery3.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="4">
+        <img src="images/gallery4.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="5">
+        <img src="images/gallery5.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="6">
+        <img src="images/gallery6.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="7">
+        <img src="images/gallery7.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="8">
+        <img src="images/gallery8.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="9">
+        <img src="images/gallery9.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="10">
+        <img src="images/gallery10.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="11">
+        <img src="images/gallery11.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="12">
+        <img src="images/gallery12.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="13">
+        <img src="images/gallery13.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="14">
+        <img src="images/gallery14.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="15">
+        <img src="images/gallery15.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="16">
+        <img src="images/gallery16.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="17">
+        <img src="images/gallery17.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="18">
+        <img src="images/gallery18.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="19">
+        <img src="images/gallery19.jpg" alt="">
+      </div>
+      <div class="gallery-image" data-no="20">
+        <img src="images/gallery20.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- ==============================
+  footer
+  =================================== -->
+  <footer id="footer">
+    <p class="copyright">2021 Copyright &copy; my website All rights reserved.</p>
+    <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
+  </footer>
+  <!-- ==============================
+  script
+  =================================== -->
+  <script src="js/scripts.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
