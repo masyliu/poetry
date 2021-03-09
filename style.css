@@ -59,6 +59,19 @@ ul.checklist li:before {
 	margin-right:5px;
 }
 /*=========================*/
+/* image */
+/*=========================*/ 
+.img-left {
+  float: left;
+  padding: 0.5rem;
+  width: 40%;
+}
+.img-right {
+  float: right;
+  padding: 0.5rem;
+  width: 40%;
+}
+/*=========================*/
 /* header */
 /*=========================*/
 header .navbar-header {
@@ -240,7 +253,6 @@ header .navbar-header.fixed .navbar-list > * {
 }
 .videowrap .videocontent h2 {
   font-weight:600;
-  transform: scale(0.4);
   animation: zoomIn 2s forwards 0.4s;
 }
 @keyframes zoomIn {
@@ -257,7 +269,6 @@ header .navbar-header.fixed .navbar-list > * {
   background-color: var(--green);
   padding: 4rem 3rem 4rem 3rem;
   text-align: center;
-  transform: scale(0.4);
   animation: update-zoomIn 0.7s forwards;
 }
 @keyframes update-zoomIn {
@@ -608,12 +619,93 @@ header .navbar-header.fixed .navbar-list > * {
   }
 }
 /*=========================*/
+/* aboutUs */
+/*=========================*/
+.aboutUs {
+  background-color: var(--orange);
+  padding: 4rem 3rem 4rem 3rem;
+  animation: about-zoomIn 0.7s forwards;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-gap: 2rem;
+}
+@keyframes about-zoomIn {
+  0% {transform: scale(0.6);}
+  100%  {transform: scale(1);}
+}
+.sidebar {
+  list-style: none;
+  text-align: center;
+}
+.sidebar.fixed {
+  position: sticky;
+  height: 50vh;
+  top: 64px;
+  left: 48px;
+}
+.menuTitle {
+  background-color: var(--dark);
+  color: white;
+  padding: 1rem;
+}
+.sidebar > li {
+  margin: 0.5rem 0; 
+}
+.sidebar > li > a {
+  display: block;
+  padding: 1rem;
+  border-top: 0.3rem solid var(--purple);
+  border-bottom: 0.1rem dotted var(--purple);
+  letter-spacing: 0.1rem;
+  background-color: var(--lightgreen);
+}
+.sidebar > li > a:hover,
+.sidebar > li.active > a {
+  border: 0.1rem solid var(--purple);
+  background-color: var(--green);
+  font-weight: bold;
+}
+.sidebar > li.active {
+  border: 0 solid var(--green);
+  border-right-width: 0.4rem;
+}
+.aboutUs .sec {
+  margin-top: -4rem; /* adjust the anchor position */
+  padding-top: 4rem; /* adjust the anchor position */
+}
+.aboutUs h2 {
+  background-color: var(--green);
+  padding: 1rem 2rem;
+  border-left: 0.8rem solid var(--dark);
+}
+.aboutUs .aboutSec {
+  background-color: var(--lightgreen);
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  text-align: justify;
+  line-height:2em;
+}
+.aboutUs .aboutSec > * {
+  margin: 1rem 0;
+}
+.aboutUs .aboutSec li {
+  margin-left: 2rem;
+  padding-left: 0.5rem;
+}
+@media screen and (max-width: 900px) {
+  .aboutUs {
+    grid-template-columns: 1fr;
+  }
+  .sidebar.fixed {
+    position: static;
+  }
+}
+/*=========================*/
 /* news-text > updates */
 /*=========================*/
 .text-update {
   background-color: var(--green);
   padding: 4rem 3rem 4rem 3rem;
-  transform: scale(0.4);
   text-align: center;
   animation: update-zoomIn 0.7s forwards;
 }
@@ -673,7 +765,6 @@ header .navbar-header.fixed .navbar-list > * {
 .sort-update {
   background-color: var(--green);
   padding: 4rem 3rem 4rem 3rem;
-  transform: scale(0.4);
   text-align: center;
   animation: update-zoomIn 0.7s forwards;
 }
