@@ -10,6 +10,7 @@
   --lightpurple:#CC9CC8;
   --orange: #F4E0CC;
   --beige: #f3f0e2;
+  --mint: #ddebd9;
 }
 html {
   box-sizing: border-box;
@@ -265,6 +266,13 @@ header .navbar-header.fixed .navbar-list > * {
 @media screen and (max-width: 600px) {
   .videowrap {
     margin-top: 5.5rem;
+  }
+  .videowrap .videocontent h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .videowrap .videocontent h2 {
+    font-size: 1rem;
   }
 } 
 /*=========================*/
@@ -930,6 +938,138 @@ header .navbar-header.fixed .navbar-list > * {
   }
 }
 /*=========================*/
+/* poem-container */
+/*=========================*/
+.poem-update {
+  background-color: var(--mint);
+}
+@keyframes update-zoomIn {
+  0% {transform: scale(0.6);}
+  100%  {transform: scale(1);}
+}
+.poem-container {
+  text-align: justify;
+  margin: 4rem 0;
+}
+.poem-container h1 {
+  font-size: 2rem;
+  color: var(--purple);
+  text-shadow: 0 0 2rem var(--dark);
+}
+.poem-container h3 {
+  color: var(--purple);
+  text-shadow: 0 0 2rem var(--lightpurple);
+}
+.poem-container h3:first-child {
+  position: relative;
+} 
+.poem-container h3:first-child::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--dark);
+}
+/*=========================*/
+/* poem1 */
+/*=========================*/
+.poem1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+.poem-left > *,
+.poem-right > * {
+  padding: 1rem 0;
+}
+.poem1 > * > * > * {
+  padding: 0.2rem 0;
+}
+@media screen and (max-width: 700px) {
+  .poem1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=========================*/
+/* poem2 */
+/*=========================*/
+.poem2 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+.poem-left > *,
+.poem-right > * {
+  padding: 1rem 0;
+}
+.poem2 > * > * > * {
+  padding: 0.2rem 0;
+}
+@media screen and (max-width: 700px) {
+  .poem2 {
+    grid-template-columns: 1fr;
+  }
+}
+/*=========================*/
+/* poem3 */
+/*=========================*/
+.poem3 .poem-main {
+  text-align: center;
+}
+.poem3 > * {
+  margin: 2rem 0;
+}
+.poem3 > * > * {
+  padding: 0.2rem 0;
+}
+.poem3 h1 {
+  transform: translateX(-100vw);
+  animation: shake 1s ease 0.9s forwards;
+}
+@keyframes shake {
+  40% { transform: translateX(5%); }
+  60% { transform: translateX(-5%); }
+  80% { transform: translateX(2%); }
+  90% { transform: translateX(-2%); }
+  100% { transform: translateX(0%); }
+}
+/*=========================*/
+/* poem4 */
+/*=========================*/
+.poem4 .poem-main::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.poem4 .poem-main img.decoration {
+  float: right;
+  max-width: 25rem; 
+  margin-left: 1.5rem;
+}
+.poem4 > * {
+  margin: 2rem 0;
+}
+.poem4 > * > * {
+  padding: 0.2rem 0;
+}
+@media screen and (max-width: 900px) {
+  .poem4 .poem-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .poem4 .poem-main img.decoration {
+    float: none;
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+    order: 5;
+  }
+}
+/*=========================*/
 /* gallery */
 /*=========================*/
 .gallery {
@@ -1028,7 +1168,6 @@ header .navbar-header.fixed .navbar-list > * {
   height: 100%;
   object-fit: cover;
   transition: all 0.3s linear;
-
 }
 .gallery-image:hover img {
   transform: scale(1.4);
