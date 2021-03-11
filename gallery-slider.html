@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Masy Liu">
+  <meta name="title" content="Poetry">
+  <meta name="description" content="Poetry">
+  <meta name="keywords" content="Poetry">
+  <title>Poetry</title>
+  <link rel="icon" href="images/icon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://kit.fontawesome.com/f49a20a247.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- ==============================
+  header
+  =================================== -->
+  <header id="header">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">
+        <img id="logo" src="images/logo.png" alt="">
+      </a>
+      <button type="button" class="menuBtn">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-collapse">
+        <button type="button" class="menuCloseBtn">&#10006;</button>
+        <nav class="navbar-list">
+          <div class="dropdown">
+            <div class="dropbtn">首頁版型</div>
+            <div class="dropdown-content">
+              <a href="index.html">影音首頁</a>
+              <a href="index-slider.html">輪播圖首頁</a>
+            </div>
+          </div>
+          <a href="about.html">關於我</a>
+          <div class="dropdown">
+            <div class="dropbtn">文章列表版型</div>
+            <div class="dropdown-content">
+              <a href="news-text.html">文字標題列表</a>
+              <a href="news-image.html">圖文列表</a>
+              <a href="news-sort.html">分類式圖文列表</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="dropbtn">相簿版型</div>
+            <div class="dropdown-content">
+              <a href="gallery.html">滿版型相簿</a>
+              <a href="gallery-slider.html">Slider相簿</a>
+              <a href="gallery-flex.html">Flex Panel相簿</a>
+              <a href="gallery-grid.html">Grid Image相簿</a>
+            </div>
+          </div>
+          <a href="contact.html">與我聯絡</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- ==============================
+  top image
+  =================================== -->
+  <section class="galleryTop top-container">
+    <img src="images/top-gallery.jpg" alt="">
+    <div class="galleryTop-content top-content">
+      <h2 class="title">Photo Gallery</h2>
+      <a href="#gallery-slider" class="downarrow-link"><span class="downarrow">&raquo;</span></a>
+    </div>
+  </section>
+  <!-- ==============================
+  gallery
+  =================================== -->
+  <section id="startcontent" class="gallery">
+    <h2 class="title">相簿集</h2>
+    <p class="tagline">Photo Gallery</p>
+    <div id="gallery-slider">
+      <div class="gallery-slide-container">
+        <div class="gallery-slide slide">
+          <div class="numbertext">1</div>
+          <img src="images/gallery1.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">2</div>
+          <img src="images/gallery2.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">3</div>
+          <img src="images/gallery3.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">4</div>
+          <img src="images/gallery4.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">5</div>
+          <img src="images/gallery5.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">6</div>
+          <img src="images/gallery6.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">7</div>
+          <img src="images/gallery7.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">8</div>
+          <img src="images/gallery8.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">9</div>
+          <img src="images/gallery9.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">10</div>
+          <img src="images/gallery10.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">11</div>
+          <img src="images/gallery11.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">12</div>
+          <img src="images/gallery12.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">13</div>
+          <img src="images/gallery13.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">14</div>
+          <img src="images/gallery14.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">15</div>
+          <img src="images/gallery15.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">16</div>
+          <img src="images/gallery16.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">17</div>
+          <img src="images/gallery17.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">18</div>
+          <img src="images/gallery18.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">19</div>
+          <img src="images/gallery19.jpg" alt="">
+        </div>
+        <div class="gallery-slide slide">
+          <div class="numbertext">20</div>
+          <img src="images/gallery20.jpg" alt="">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div class="dots thumbnails">
+        <img class="dot thumbnail" src="images/gallery1.jpg" alt="" onclick="currentSlide(1)">
+        <img class="dot thumbnail" src="images/gallery2.jpg" alt="" onclick="currentSlide(2)">
+        <img class="dot thumbnail" src="images/gallery3.jpg" alt="" onclick="currentSlide(3)">
+        <img class="dot thumbnail" src="images/gallery4.jpg" alt="" onclick="currentSlide(4)">
+        <img class="dot thumbnail" src="images/gallery5.jpg" alt="" onclick="currentSlide(5)">
+        <img class="dot thumbnail" src="images/gallery6.jpg" alt="" onclick="currentSlide(6)">
+        <img class="dot thumbnail" src="images/gallery7.jpg" alt="" onclick="currentSlide(7)">
+        <img class="dot thumbnail" src="images/gallery8.jpg" alt="" onclick="currentSlide(8)">
+        <img class="dot thumbnail" src="images/gallery9.jpg" alt="" onclick="currentSlide(9)">
+        <img class="dot thumbnail" src="images/gallery10.jpg" alt="" onclick="currentSlide(10)">
+        <img class="dot thumbnail" src="images/gallery11.jpg" alt="" onclick="currentSlide(11)">
+        <img class="dot thumbnail" src="images/gallery12.jpg" alt="" onclick="currentSlide(12)">
+        <img class="dot thumbnail" src="images/gallery13.jpg" alt="" onclick="currentSlide(13)">
+        <img class="dot thumbnail" src="images/gallery14.jpg" alt="" onclick="currentSlide(14)">
+        <img class="dot thumbnail" src="images/gallery15.jpg" alt="" onclick="currentSlide(15)">
+        <img class="dot thumbnail" src="images/gallery16.jpg" alt="" onclick="currentSlide(16)">
+        <img class="dot thumbnail" src="images/gallery17.jpg" alt="" onclick="currentSlide(17)">
+        <img class="dot thumbnail" src="images/gallery18.jpg" alt="" onclick="currentSlide(18)">
+        <img class="dot thumbnail" src="images/gallery19.jpg" alt="" onclick="currentSlide(19)">
+        <img class="dot thumbnail" src="images/gallery20.jpg" alt="" onclick="currentSlide(20)">
+      </div>
+    </div>
+  </section>
+  <!-- ==============================
+  footer
+  =================================== -->
+  <footer id="footer">
+    <p class="copyright">2021 Copyright &copy; my website All rights reserved.</p>
+    <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
+  </footer>
+  <!-- ==============================
+  script
+  =================================== -->
+  <script src="js/scripts.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>

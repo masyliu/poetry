@@ -2,6 +2,10 @@
 // index-slider > slider
 // =================================
 
+// =================================
+// gallery-slider
+// =================================
+
 const slides = document.getElementsByClassName("slide");
 const dots = document.getElementsByClassName("dot");
 let slideIndex = 1;
@@ -29,8 +33,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-carousel();
-
 function carousel() {
   let i;
   for (i = 0; i < slides.length; i++) {
@@ -43,5 +45,5 @@ function carousel() {
   if (slideIndex > slides.length) {slideIndex = 1};
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(carousel, 5000);
+  setTimeout(carousel, 3000);
 }
