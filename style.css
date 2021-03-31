@@ -49,13 +49,13 @@ button {
 /*=========================*/
 /* lists */
 /*=========================*/ 
-ul.unstyle {
+.unstyle {
   padding-left: 0.8rem;
 }
-ul.unstyle li {
+.unstyle li {
 	list-style: none;
 }
-ul.checklist li:before {
+.checklist li:before {
 	content:"\2713";
 	margin-right:5px;
 }
@@ -75,7 +75,7 @@ ul.checklist li:before {
 /*=========================*/
 /* header */
 /*=========================*/
-header .navbar-header {
+.navbar-header {
   position: absolute;
   top: 0;
   background: transparent;
@@ -94,12 +94,12 @@ header .navbar-header {
   cursor: pointer;
   color: white;
 }
-header .navbar-header.fixed {
+.navbar-header.fixed {
   position: fixed;
   background: var(--beige);
   border-bottom: 0.1rem solid var(--beige);
 }
-header .navbar-header.fixed .navbar-list > * {
+.navbar-header.fixed .navbar-list > * {
   color: var(--dark);
 }
 .navbar-header.fixed #logo {
@@ -111,7 +111,7 @@ header .navbar-header.fixed .navbar-list > * {
   border-radius: 0.4rem;
   justify-self: end;
 }
-.menuBtn .icon-bar {
+.icon-bar {
   display: block;
   width: 1.8rem;
   height: 0.2rem;
@@ -156,7 +156,7 @@ header .navbar-header.fixed .navbar-list > * {
   color: var(--beige);
 }
 @media screen and (max-width: 600px) {
-  header .navbar-header {
+  .navbar-header {
     background: var(--beige);
     position: fixed;
     top: 0;
@@ -240,7 +240,7 @@ header .navbar-header.fixed .navbar-list > * {
 	top:0;
 	position:absolute;
 }
-.videowrap .videocontent {
+.videocontent {
 	position:absolute;
 	top:40%;
 	left:0;
@@ -249,11 +249,11 @@ header .navbar-header.fixed .navbar-list > * {
 	color: white;
 	text-align: center;
 }
-.videowrap .videocontent h3 {
+.videocontent h3 {
   font-weight: 300;
   margin-bottom: 1rem;
 }
-.videowrap .videocontent h2 {
+.videocontent h2 {
   font-weight:600;
   animation: zoomIn 2s forwards 0.4s;
 }
@@ -261,18 +261,18 @@ header .navbar-header.fixed .navbar-list > * {
   0% {transform: scale(0.4);}
   100%  {transform: scale(1);}
 }
-.videowrap .videocontent h2 .accentcolor {
+.accentcolor {
   color: var(--lightpurple);
 } 
 @media screen and (max-width: 600px) {
   .videowrap {
     margin-top: 5.5rem;
   }
-  .videowrap .videocontent h3 {
+  .videocontent h3 {
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
   }
-  .videowrap .videocontent h2 {
+  .videocontent h2 {
     font-size: 1rem;
   }
 } 
@@ -1185,7 +1185,7 @@ header .navbar-header.fixed .navbar-list > * {
   position: relative;
   background: rgba(255, 255, 255, 0.5);
 }
-#gallery-slider .slide {
+#gallery-slider .gallery-slide {
   display: none;
   animation: fadeIn 1s linear forwards;
 }
