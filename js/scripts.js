@@ -23,12 +23,10 @@ const menuBtn = document.querySelector(".menuBtn");
 const menuCloseBtn = document.querySelector(".menuCloseBtn");
 
 function openNav() {
-  console.log(this);
   navCollapse.classList.add("open");
 }
 
 function closeNav() {
-  console.log(this);
   navCollapse.classList.remove("open");
 }
 
