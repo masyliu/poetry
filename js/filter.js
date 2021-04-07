@@ -4,7 +4,7 @@
 
 
 const filterBtns = document.getElementsByClassName("filterBtn");
-const sort = [...document.querySelectorAll(".sort")];
+const sort = document.querySelectorAll(".sort");
 let selector = "sort";
 
 filter(selector);

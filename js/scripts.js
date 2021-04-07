@@ -33,8 +33,9 @@ function closeNav() {
 }
 
 function resizeHandler() {
-  if (window.visualViewport.width > 600)
-  navCollapse.classList.remove("open");
+  if (window.visualViewport.width > 600) {
+    navCollapse.classList.remove("open");
+  }
 }
 
 menuBtn.addEventListener("click", openNav);
