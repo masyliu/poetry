@@ -31,11 +31,12 @@ function closeNav() {
 }
 
 function resizeHandler() {
-  if (window.visualViewport.width > 600) {
+  let viewWidth = window.innerWidth || window.visualViewport.width;
+  if (viewWidth > 600) {
     navCollapse.classList.remove("open");
   }
 }
 
 menuBtn.addEventListener("click", openNav);
 menuCloseBtn.addEventListener("click", closeNav);
-window.visualViewport.addEventListener('resize', resizeHandler);
+window.addEventListener('resize', resizeHandler);
